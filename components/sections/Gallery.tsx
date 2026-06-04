@@ -37,7 +37,6 @@ function GalleryItem({
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
         sizes="(max-width: 768px) 100vw, 33vw"
-        onError={() => {}}   // silencieux — le placeholder s'affiche via CSS
       />
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent pointer-events-none" />
@@ -65,7 +64,7 @@ export function Gallery({ config }: { config: SalonConfig }) {
           subtitle="Nos réalisations parlent d'elles-mêmes."
           dark
         />
-
+        
         {/* Grille asymétrique : grande image à gauche, 4 petites à droite */}
         <div className="grid grid-cols-3 grid-rows-2 gap-2 h-[320px] lg:h-[420px]">
           {first && (
