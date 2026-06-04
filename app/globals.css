@@ -1,0 +1,43 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold:       #C9A96E;
+  --gold-light: #E8D5B0;
+  --gold-dark:  #9A7840;
+  --noir:       #0F0F0F;
+  --noir-soft:  #1A1A1A;
+  --cream:      #FAF7F2;
+  --muted:      #888;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans, 'Jost', sans-serif);
+  background: var(--cream);
+  color: var(--noir);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animations d'entrée */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.anim-fade-up   { animation: fadeUp  0.7s ease both; }
+.anim-fade-in   { animation: fadeIn  0.6s ease both; }
+.anim-d1 { animation-delay: 0.1s; }
+.anim-d2 { animation-delay: 0.2s; }
+.anim-d3 { animation-delay: 0.3s; }
+.anim-d4 { animation-delay: 0.4s; }
+.anim-d5 { animation-delay: 0.5s; }
